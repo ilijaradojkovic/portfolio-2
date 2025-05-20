@@ -1,0 +1,84 @@
+.contact-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 100%;
+     @media (max-width: 768px) {
+        text-align: center;
+     }
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    gap: 4rem;
+}
+.text-content {
+    width: 100% !important;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.input,
+.textarea {
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.button {
+    padding: 12px;
+    background-color: #e5565d;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #d4787c;
+    }
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

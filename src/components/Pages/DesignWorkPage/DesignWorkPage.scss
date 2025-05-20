@@ -1,0 +1,21 @@
+.design-work-text{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.text-icon{
+    font-size: 2rem;
+}
+.design-work-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+     @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+  }
+}
+.text-header{
+    margin-bottom: 0.5rem !important;
+}

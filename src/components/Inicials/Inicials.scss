@@ -1,0 +1,46 @@
+.inicials {
+    position: fixed;
+    top: 57px;
+    left: 58px;
+    z-index: 40;
+    cursor: pointer;
+
+    width: 72px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #060606;
+
+    transition:
+        background-color 0.4s,
+        color 0.4s,
+        border 0.4s;
+    padding: 6px 20px;
+
+    @media (max-width: 768px) {
+        top: 57px;
+        left: 48px;
+    }
+
+    &-light {
+        color: white;
+        border: 1px solid #060606;
+        background-color: #060606;
+
+        &:hover {
+            color: white;
+            background-color: #080808;
+        }
+    }
+    &-dark {
+        background-color: white;
+        border: 1px solid white;
+        color: #060606;
+        &:hover {
+            color: #060606;
+            background-color: white;
+        }
+    }
+}

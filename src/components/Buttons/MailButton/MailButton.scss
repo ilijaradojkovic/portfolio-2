@@ -1,0 +1,44 @@
+.mail-button {
+  position: fixed;
+  top: 97px;
+  left: 57px;
+  z-index: 40;
+  cursor: pointer;
+
+  width: 72px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    border 0.4s;
+  padding: 6px 20px;
+
+  @media (max-width: 768px) {
+    top: 157px;
+    left: 48px;
+  }
+
+  &-light {
+    color: #060606;
+    border: 1px solid #060606;
+    background-color: transparent;
+
+    &:hover {
+      color: white;
+      background-color: #080808;
+    }
+  }
+  &-dark {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    &:hover {
+      color: #060606;
+      background-color: white;
+    }
+  }
+}
