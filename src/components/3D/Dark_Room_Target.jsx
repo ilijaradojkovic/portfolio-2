@@ -9,7 +9,6 @@ import gsap from "gsap";
 import { useUiStore } from "../../store/UiStore";
 import { useNavigate } from "react-router";
 import { MeshBasicMaterial, MeshStandardMaterial } from "three";
-import ClickHint from "../hints/ClickHint/ClickHint";
 import { useExperienceStore } from "../../store/ExperienceStore";
 import { useRoomStore } from "../../store/roomStore";
 export function DarkRoomTarget(props) {
@@ -21,8 +20,13 @@ export function DarkRoomTarget(props) {
   const aboutAnimRef = useRef();
   const servicesAnimRef = useRef();
   const clickAnimRefs = useRef([]);
-  const { isExperienceReady,isModelVisible,isFirstTimeOnDarkPage,setIsFirstTimeOnDarkPage } = useExperienceStore();
-    const {roomType}=useRoomStore();
+  const {
+    isExperienceReady,
+    isModelVisible,
+    isFirstTimeOnDarkPage,
+    setIsFirstTimeOnDarkPage,
+  } = useExperienceStore();
+  const { roomType } = useRoomStore();
 
   const animationPairs = {
     about: { ref: aboutAnimRef, scale: { x: -0.02, y: -0.02, z: -0.02 } },
@@ -42,8 +46,9 @@ export function DarkRoomTarget(props) {
   };
   useEffect(() => {
     // čekaj da refovi budu mountovani
-    if(!isModelVisible || !isFirstTimeOnDarkPage || roomType!=='DarkRoom') return
-    console.log('radim')
+    if (!isModelVisible || !isFirstTimeOnDarkPage || roomType !== "DarkRoom")
+      return;
+    console.log("radim");
     const refs = clickAnimRefs.current.filter(Boolean);
     if (refs.length > 0) {
       console.log("Refs:", refs);
@@ -52,29 +57,37 @@ export function DarkRoomTarget(props) {
       gsap.fromTo(
         refs.map((ref) => ref.children[0]), // targeting the <div> inside <Html>
         { opacity: 1 },
-        { opacity: 0, duration: 1, stagger: 0.2,delay:0.5,onComplete:()=>{
-          setIsFirstTimeOnDarkPage()
-        } },
-        
+        {
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          delay: 0.5,
+          onComplete: () => {
+            setIsFirstTimeOnDarkPage();
+          },
+        }
       );
     }
-  }, [isModelVisible,roomType,isFirstTimeOnDarkPage]);
+  }, [isModelVisible, roomType, isFirstTimeOnDarkPage]);
   return (
     <>
-      <Html
-        position={[-2.355, 2.108, 1.227]}
-        ref={(el) => (clickAnimRefs.current[0] = el)}
-      >
-        <div style={{ color: "white" }}>Click</div>
-      </Html>
+      {isFirstTimeOnDarkPage && (
+        <>
+          <Html
+            position={[-2.355, 2.108, 1.227]}
+            ref={(el) => (clickAnimRefs.current[0] = el)}
+          >
+            <div style={{ color: "white" }}>Click</div>
+          </Html>
 
-      <Html
-        position={[0.934, 2.108, -3.124]}
-        ref={(el) => (clickAnimRefs.current[1] = el)}
-      >
-        <div style={{ color: "white" }}>Click</div>
-      </Html>
-
+          <Html
+            position={[0.934, 2.108, -3.124]}
+            ref={(el) => (clickAnimRefs.current[1] = el)}
+          >
+            <div style={{ color: "white" }}>Click</div>
+          </Html>
+        </>
+      )}
       <group {...props} dispose={null}>
         <mesh
           visible={false}

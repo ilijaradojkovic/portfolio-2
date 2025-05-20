@@ -3,11 +3,12 @@ import "./DevWorkPage.scss";
 import Page from "../Page";
 import gsap from "gsap";
 import { usePageTransitionStore } from "../../../store/PageTransitionStore";
+import ClickHint from "../../hints/ClickHint/ClickHint";
 export default function DevWorkPage() {
-    const { isEntering, delay } = usePageTransitionStore();
+  const { isEntering, delay } = usePageTransitionStore();
 
-        useEffect(() => {
-    if (isEntering ) {
+  useEffect(() => {
+    if (isEntering) {
       const devSections = gsap.utils.toArray(".dev-work-text");
       const newDelay = delay >= 2 ? delay : 0.3;
 
@@ -27,7 +28,9 @@ export default function DevWorkPage() {
         <div className="dev-work-wrapper">
           <div className="dev-work-text">
             <div className="text-header">
+              <ClickHint top={"-20%"} left={"0%"} />
               <span className="text-icon">⚽️</span>
+
               <a
                 href="https://primavera-liga.netlify.app/"
                 target="_blank"
@@ -44,6 +47,96 @@ export default function DevWorkPage() {
             <div className="text-content">
               A management dashboard for football leagues – teams, matches, and
               stats tracking.
+            </div>
+          </div>
+          <div className="dev-work-text">
+            <div className="text-header">
+              <span className="text-icon">🚗</span>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Car Tracking Management <span className="text-nda">NDA</span><span className="text-no-link">no link</span>
+              </a>
+            
+            </div>
+            <span className="text-tehnologies">
+              <span className="text-tehnologies-item">REACT</span>
+              <span className="text-tehnologies-item">FIREBASE</span>
+            </span>
+            <div className="text-content">
+              A web-based dashboard for monitoring and managing a fleet of
+              vehicles in real time. The app allows users to track vehicle
+              locations on an interactive map, view movement history, assign
+              drivers, and receive maintenance alerts.
+            </div>
+          </div>
+
+          <div className="dev-work-text">
+            <div className="text-header">
+              <span className="text-icon">🧾</span>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Invoice Management System <span className="text-nda">NDA</span><span className="text-no-link">no link</span>
+              </a>
+            </div>
+            <span className="text-tehnologies">
+              <span className="text-tehnologies-item">REACT</span>
+              <span className="text-tehnologies-item">JAVA</span>
+              <span className="text-tehnologies-item">MYSQL</span>
+            </span>
+            <div className="text-content">
+              A tool for creating, sending, and managing invoices with tax logic
+              and PDF,XLS import and exports.
+            </div>
+          </div>
+
+          <div className="dev-work-text">
+            <div className="text-header">
+              <span className="text-icon">🏢</span>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Office Management Platform <span className="text-nda">NDA</span><span className="text-no-link">no link</span>
+              </a>
+            </div>
+            <span className="text-tehnologies">
+              <span className="text-tehnologies-item">ANGULAR</span>
+              <span className="text-tehnologies-item">JAVA</span>
+              <span className="text-tehnologies-item">POSTGRESQL</span>
+            </span>
+            <div className="text-content">
+              Internal dashboard for managing teams, scheduling, and internal
+              office operations.
+            </div>
+          </div>
+
+          <div className="dev-work-text">
+            <div className="text-header">
+              <span className="text-icon">📱</span>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Social Media Micro Platform <span className="text-nda">NDA</span><span className="text-no-link">no link</span>
+              </a>
+            </div>
+            <span className="text-tehnologies">
+              <span className="text-tehnologies-item">REACT</span>
+              <span className="text-tehnologies-item">FIREBASE</span>
+            </span>
+            <div className="text-content">
+              A minimalist platform for posting updates, following users, and
+              social interaction in real-time.
+            </div>
+          </div>
+
+          <div className="dev-work-text">
+            <div className="text-header">
+              <span className="text-icon">🎰</span>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Aviator Betting Game <span className="text-nda">NDA</span><span className="text-no-link">no link</span>
+              </a>
+            </div>
+            <span className="text-tehnologies">
+              <span className="text-tehnologies-item">JAVA</span>
+              <span className="text-tehnologies-item">REDIS</span>
+              <span className="text-tehnologies-item">REACT</span>
+            </span>
+            <div className="text-content">
+              A high-stakes multiplayer betting game inspired by Aviator, with
+              real-time logic and secure payouts.
             </div>
           </div>
 
@@ -264,7 +357,7 @@ export default function DevWorkPage() {
           <div className="dev-work-text">
             <div className="text-header">
               <span className="text-icon">🎆 </span>
-                 <a
+              <a
                 href="https://rococo-alpaca-7c61a8.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -286,7 +379,7 @@ export default function DevWorkPage() {
           <div className="dev-work-text">
             <div className="text-header">
               <span className="text-icon">🌀 </span>
-                       <a
+              <a
                 href="https://holohrams-sh.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -308,7 +401,7 @@ export default function DevWorkPage() {
           <div className="dev-work-text">
             <div className="text-header">
               <span className="text-icon">🌐 </span>
-                           <a
+              <a
                 href="https://animated-sphere-21312.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -330,7 +423,7 @@ export default function DevWorkPage() {
           <div className="dev-work-text">
             <div className="text-header">
               <span className="text-icon">🎶 </span>
-                             <a
+              <a
                 href="https://music-sphere12.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"

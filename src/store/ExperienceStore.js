@@ -4,6 +4,9 @@ export const useExperienceStore = create((set) => ({
   isModelVisible: false,
   isFirstTimeOnLightPage: true,
   isFirstTimeOnDarkPage: true,
+  isHintShownDevWork: false,
+  isHintShownDesignWork: false,
+
   setIsExperienceReady: () =>
     set({
       isExperienceReady: true,

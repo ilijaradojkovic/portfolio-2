@@ -75,19 +75,23 @@ export function LightRoomTarget(props) {
   }, [isModelVisible, roomType, isFirstTimeOnLightPage]);
   return (
     <>
-      <Html
-        position={[-2.906, 1.618, 1.301]}
-        ref={(el) => (clickAnimRefs.current[0] = el)}
-      >
-        <div style={{ color: "black" }}>Click</div>
-      </Html>
+      {isFirstTimeOnLightPage && (
+        <>
+          <Html
+            position={[-2.906, 1.618, 1.301]}
+            ref={(el) => (clickAnimRefs.current[0] = el)}
+          >
+            <div style={{ color: "black" }}>Click</div>
+          </Html>
 
-      <Html
-        position={[0.022, 1.773, -2.864]}
-        ref={(el) => (clickAnimRefs.current[1] = el)}
-      >
-        <div style={{ color: "black" }}>Click</div>
-      </Html>
+          <Html
+            position={[0.022, 1.773, -2.864]}
+            ref={(el) => (clickAnimRefs.current[1] = el)}
+          >
+            <div style={{ color: "black" }}>Click</div>
+          </Html>
+        </>
+      )}
       <group {...props} dispose={null}>
         <mesh
           ref={devWorkAnimRef}

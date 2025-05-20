@@ -20,7 +20,6 @@ import Router from "./routes/Router";
 import Overlay from "./components/Overlay/Overlay";
 import Inicials from "./components/Inicials/Inicials";
 import MailButton from "./components/Buttons/MailButton/MailButton";
-import ClickHint from "./components/hints/ClickHint/ClickHint";
 import { ToastContainer } from "react-toastify";
 
 export default function App() {

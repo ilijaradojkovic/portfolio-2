@@ -33,8 +33,13 @@ export default function DesignWorkPage() {
         <div className="design-work-wrapper">
           <div className="design-work-text">
             <div className="text-header">
-              <span className="text-icon">🖌️ </span>Dribble
-            </div>
+  <a
+                href=" https://dribbble.com/ilija"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dribble
+              </a>            </div>
             <span className="text-tehnologies">
               <span className="text-tehnologies-item">FIGMA</span>
             </span>

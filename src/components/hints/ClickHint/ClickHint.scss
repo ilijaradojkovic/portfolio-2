@@ -1,7 +1,13 @@
-.click-hint-wrapper{
-    position: absolute;
-   
-    
-    z-index: 1000;
-    background-color: aqua;
+.click-hint-wrapper {
+  font-size: 1.2rem;
+  color: rgb(7, 0, 0);
+  display: flex;
+  gap: 1px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.click-hint-letter {
+  display: inline-block;
+ 
 }

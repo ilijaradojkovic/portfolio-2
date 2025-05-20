@@ -3,7 +3,6 @@ import "./AboutPage.scss";
 import Page from "../Page";
 import { usePageTransitionStore } from "../../../store/PageTransitionStore";
 import gsap from "gsap";
-import ClickHint from "../../hints/ClickHint/ClickHint";
 
 export default function AboutPage() {
   const { isEntering, delay } = usePageTransitionStore();
